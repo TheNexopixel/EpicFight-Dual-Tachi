@@ -128,7 +128,7 @@ public class DTAnimations {
         );
         DUAL_TACHI_DASH = builder.nextAccessor("biped/combat/dual_tachi_dash", (accessor) ->
                 new DashAttackAnimation(0.12F, 0.21F, 0.65F, 0.77F, 1.1F, null, biped.get().toolR, accessor, biped)
-                        .addProperty(AnimationProperty.AttackAnimationProperty.BASIS_ATTACK_SPEED, 1.5F)
+                        .addProperty(AnimationProperty.AttackAnimationProperty.BASIS_ATTACK_SPEED, 1.2F)
                         .addProperty(AnimationProperty.ActionAnimationProperty.CANCELABLE_MOVE, true));
 
         DUAL_TACHI_DASH_SKILL = builder.nextAccessor("biped/skill/dual_tachi_dash_skill", (accessor) ->
@@ -277,19 +277,19 @@ public class DTAnimations {
                                 .addProperty(AnimationProperty.AttackPhaseProperty.ARMOR_NEGATION_MODIFIER, ValueModifier.adder(10F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.STUN_TYPE,StunType.HOLD)
                         ,
-                        new AttackAnimation.Phase(0.95f, 0.10f, 0.95f, 1.05f, 1.7f, 1.05f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
+                        new AttackAnimation.Phase(0.95f, 0.10f, 0.95f, 1.05f, 1.97f, 1.05f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
                                 .addProperty(AnimationProperty.AttackPhaseProperty.DAMAGE_MODIFIER, ValueModifier.multiplier(0.4F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.MAX_STRIKES_MODIFIER, ValueModifier.adder(10F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.ARMOR_NEGATION_MODIFIER, ValueModifier.adder(10F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.STUN_TYPE,StunType.HOLD)
                         ,
-                        new AttackAnimation.Phase(1.05f, 0.10f, 1.05f, 1.15f, 1.7f, 1.15f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
+                        new AttackAnimation.Phase(1.05f, 0.10f, 1.05f, 1.15f, 1.9f, 1.15f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
                                 .addProperty(AnimationProperty.AttackPhaseProperty.DAMAGE_MODIFIER, ValueModifier.multiplier(0.4F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.MAX_STRIKES_MODIFIER, ValueModifier.adder(10F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.ARMOR_NEGATION_MODIFIER, ValueModifier.adder(10F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.STUN_TYPE,StunType.HOLD)
                         ,
-                        new AttackAnimation.Phase(1.15f, 0.10f, 1.15f, 1.25f, 1.7f, 1.25f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
+                        new AttackAnimation.Phase(1.15f, 0.10f, 1.15f, 1.25f, 1.9f, 1.25f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
                                 .addProperty(AnimationProperty.AttackPhaseProperty.DAMAGE_MODIFIER, ValueModifier.multiplier(0.4F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.MAX_STRIKES_MODIFIER, ValueModifier.adder(10F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.ARMOR_NEGATION_MODIFIER, ValueModifier.adder(10F))
@@ -297,7 +297,7 @@ public class DTAnimations {
                         ,
 
 
-                        new AttackAnimation.Phase(1.2f, 0.2f, 1.5f, 1.65f, 1.7f, 5.51f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
+                        new AttackAnimation.Phase(1.2f, 0.2f, 1.5f, 1.65f, 1.9f, 5.51f, InteractionHand.MAIN_HAND, biped.get().rootJoint, DTCollider.TACHI_ULTIMATE)
                                 .addProperty(AnimationProperty.AttackPhaseProperty.DAMAGE_MODIFIER, ValueModifier.multiplier(1.3F))
                                 .addProperty(AnimationProperty.AttackPhaseProperty.STUN_TYPE,StunType.LONG)
                                 .addProperty(AnimationProperty.AttackPhaseProperty.MAX_STRIKES_MODIFIER, ValueModifier.adder(15F))

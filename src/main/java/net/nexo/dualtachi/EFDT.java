@@ -5,14 +5,18 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
 import net.nexo.dualtachi.skill.compat.NightfallCompat;
+import net.nexo.dualtachi.skill.compat.WoMCompat;
+import reascer.wom.main.WeaponsOfMinecraft;
 import yesman.epicfight.compat.ICompatModule;
 
 import java.nio.file.Path;
@@ -28,6 +32,12 @@ public class EFDT {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         bus.addListener(this::addPackFindersEvent);
+
+        if(ModList.get().isLoaded(WeaponsOfMinecraft.MODID)) {
+            bus.addListener(WoMCompat::buildSkillEvent);
+            ICompatModule.loadCompatModule(context, WoMCompat.class);
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> bus.addListener(WoMCompat::regIcon));
+        }
 
         if(ModList.get().isLoaded(EFN.MODID)){
             ICompatModule.loadCompatModule(context, NightfallCompat.class);
