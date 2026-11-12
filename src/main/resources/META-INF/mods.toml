@@ -26,3 +26,9 @@ mandatory=true
 versionRange="[20.14.,20.15,]"
 ordering="AFTER"
 side="BOTH"
+[[dependencies."${mod_id}"]]
+modId="epicfightx"
+mandatory=false
+versionRange="*"
+ordering="AFTER"
+side="BOTH"
