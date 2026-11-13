@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.resource.PathPackResources;
 import net.nexo.dualtachi.skill.compat.NightfallCompat;
+import net.nexo.dualtachi.skill.compat.EFXCompat;
 import net.nexo.dualtachi.skill.compat.WoMCompat;
 import reascer.wom.main.WeaponsOfMinecraft;
 import yesman.epicfight.compat.ICompatModule;
@@ -41,6 +42,10 @@ public class EFDT {
 
         if(ModList.get().isLoaded(EFN.MODID)){
             ICompatModule.loadCompatModule(context, NightfallCompat.class);
+        }
+
+        if (ModList.get().isLoaded("epicfightx")) {
+            ICompatModule.loadCompatModule(context, EFXCompat.class);
         }
 
 
